@@ -17,8 +17,8 @@ class ItemToPurchase:
     # constructor function
     def __init__(self, item_name = "none", item_price = 0.0, item_quantity = 0):
         self.item_name = item_name
-        self.item_price = item_price
-        self.item_quantity = item_quantity
+        self.item_price = float(item_price)
+        self.item_quantity = int(item_quantity)
 
     def print_item_cost(self):
         print("{} {} @ ${:.2f} = ${:.2f}".format(self.item_name, self.item_quantity, self.item_price, self.item_quantity * self.item_price))
@@ -43,15 +43,21 @@ class ItemToPurchase:
 if __name__ == '__main__':
     print("Item 1")
     item_name = input('Enter the item name:\n')
-    item_price = float(input('Enter the item price:\n'))
-    item_quantity = int(input('Enter the item quantity:\n'))
-    item_to_purchase1 = ItemToPurchase(item_name, item_price, item_quantity)
+    item_price = input('Enter the item price:\n')
+    item_quantity = input('Enter the item quantity:\n')
+    if ((item_name != '') and (item_price != '') and (item_quantity != '')):
+        item_to_purchase1 = ItemToPurchase(item_name, item_price, item_quantity)
+    else:
+        item_to_purchase1 = ItemToPurchase()
 
     print("Item 2")
     item_name = input('Enter the item name:\n')
-    item_price = float(input('Enter the item price:\n'))
-    item_quantity = int(input('Enter the item quantity:\n'))
-    item_to_purchase2 = ItemToPurchase(item_name, item_price, item_quantity)
+    item_price = input('Enter the item price:\n')
+    item_quantity = input('Enter the item quantity:\n')
+    if ((item_name != '') and (item_price != '') and (item_quantity != '')):
+        item_to_purchase2 = ItemToPurchase(item_name, item_price, item_quantity)
+    else:
+        item_to_purchase2 = ItemToPurchase()
 
     print("TOTAL COST")
     item_to_purchase1.print_item_cost()
