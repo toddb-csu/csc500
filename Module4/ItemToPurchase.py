@@ -15,13 +15,15 @@
 # Bottled Water 10 @ $1 = $10
 class ItemToPurchase:
     # constructor function
-    def __init__(self, item_name = "none", item_price = 0.0, item_quantity = 0):
+    def __init__(self, item_name="none", item_price=0.0, item_quantity=0):
         self.item_name = item_name
         self.item_price = float(item_price)
         self.item_quantity = int(item_quantity)
 
     def print_item_cost(self):
-        print("{} {} @ ${:.2f} = ${:.2f}".format(self.item_name, self.item_quantity, self.item_price, self.item_quantity * self.item_price))
+        print("{} {} @ ${:.2f} = ${:.2f}".format(self.item_name, self.item_quantity, self.item_price,
+                                                 self.item_quantity * self.item_price))
+
 
 # Step 2: In the main section of your code, prompt the user for two items and
 # create two objects of the ItemToPurchase class.
@@ -45,7 +47,7 @@ if __name__ == '__main__':
     item_name = input('Enter the item name:\n')
     item_price = input('Enter the item price:\n')
     item_quantity = input('Enter the item quantity:\n')
-    if ((item_name != '') and (item_price != '') and (item_quantity != '')):
+    if (item_name != '') and (item_price != '') and (item_quantity != ''):
         item_to_purchase1 = ItemToPurchase(item_name, item_price, item_quantity)
     else:
         item_to_purchase1 = ItemToPurchase()
@@ -54,7 +56,7 @@ if __name__ == '__main__':
     item_name = input('Enter the item name:\n')
     item_price = input('Enter the item price:\n')
     item_quantity = input('Enter the item quantity:\n')
-    if ((item_name != '') and (item_price != '') and (item_quantity != '')):
+    if (item_name != '') and (item_price != '') and (item_quantity != ''):
         item_to_purchase2 = ItemToPurchase(item_name, item_price, item_quantity)
     else:
         item_to_purchase2 = ItemToPurchase()
