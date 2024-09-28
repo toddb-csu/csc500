@@ -168,8 +168,9 @@ def print_menu(shopping_cart):
             item_name_modified = input('Enter the item name that you want to modify: ')
             item_price_modified = input('Enter the new item price: ')
             item_quantity_modified = input('Enter the new item quantity: ')
-            if (item_name_modified != '') and (item_price_modified != '') and (item_quantity_modified != ''):
-                item_to_purchase_modified = ItemToPurchase(item_name_modified, item_price_modified, item_quantity_modified)
+            item_description_modified = input('Enter the item description: ')
+            if (item_name_modified != '') and (item_price_modified != '') and (item_quantity_modified != '') and (item_description_modified != ''):
+                item_to_purchase_modified = ItemToPurchase(item_name_modified, item_price_modified, item_quantity_modified, item_description_modified)
                 shopping_cart.modify_item(item_to_purchase_modified)
         elif user_input == 'i':
             shopping_cart.print_descriptions()
