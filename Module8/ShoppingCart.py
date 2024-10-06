@@ -221,8 +221,8 @@ if __name__ == '__main__':
     # February 1, 2020
     # Customer name: John Doe
     # Today's date: February 1, 2020
-    customer_name = input('Enter customer\'s name: ')
-    date_today = input('Enter today\'s name: ')
+    customer_name = input('Enter customer\'s name:\n')
+    date_today = input('Enter today\'s name:\n')
     print('Customer name: {}'.format(customer_name))
     print('Today\'s date: {}'.format(date_today))
     shopping_cart = ShoppingCart(customer_name, date_today)
